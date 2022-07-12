@@ -5,7 +5,7 @@ public class Main {
         if (a == 5) {
             switch (a) {
                 case 5:
-                    system.out.println(a);
+                    System.out.println(a);
             }
         }
     }
