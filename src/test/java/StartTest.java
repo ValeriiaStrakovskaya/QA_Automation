@@ -24,20 +24,45 @@ wd.navigate().to("https://contacts-app.tobbymarshall815.vercel.app/login");
 
     @Test
     public void testName(){
-        WebElement element =wd.findElement(By.cssSelector("div[class = navbar-component_nav__1X_4m] [href=\"/about\"]"));
+//        WebElement element =wd.findElement(By.cssSelector("div[class = navbar-component_nav__1X_4m] [href=\"/about\"]"));
+//        element.click();
+//        wd.navigate().back();
+//        element =wd.findElement(By.cssSelector("div[class = navbar-component_nav__1X_4m] [href=\"/home\"]"));
+//        element.click();
+//        wd.navigate().back();
+//         element =wd.findElement(By.cssSelector("input[placeholder='Email']"));
+//        element.click();
+//        element =wd.findElement(By.cssSelector("input[placeholder='Password']"));
+//        element.click();
+//        // element= wd.findElement(By.xpath("//button[text()=' Login']"));
+//       // element.click();
+//        element= wd.findElement(By.xpath("//button[last()]"));
+//        element.click();
+//
+
+        //HW Task2
+        WebElement element =wd.findElement(By.xpath("//a[@href='/about']"));
+       // element =wd.findElement(By.xpath("//a[contains(text(),'ABOUT')]"));
         element.click();
         wd.navigate().back();
-        element =wd.findElement(By.cssSelector("div[class = navbar-component_nav__1X_4m] [href=\"/home\"]"));
+        element =wd.findElement(By.xpath("//a[@href='/home']"));
+       // element =wd.findElement(By.xpath("//a[contains(text(),'HOME')]"));
         element.click();
         wd.navigate().back();
-         element =wd.findElement(By.cssSelector("input[placeholder='Email']"));
+        element =wd.findElement(By.xpath("//*[@placeholder='Email']"));
+      //  element =wd.findElement(By.xpath("//input[@placeholder='Email']"));
+      //  element =wd.findElement(By.xpath("//input[position()=1]"));
         element.click();
-        element =wd.findElement(By.cssSelector("input[placeholder='Password']"));
+        element =wd.findElement(By.xpath("//*[@placeholder='Password']"));
+       // element =wd.findElement(By.xpath("//input[last()]"));
         element.click();
-        // element= wd.findElement(By.xpath("//button[text()=' Login']"));
-       // element.click();
-        element= wd.findElement(By.xpath("//button[last()]"));
+        element= wd.findElement(By.xpath("//button[2]"));
+      //  element= wd.findElement(By.xpath("//button[text()=' Registration']"));
+      //  element= wd.findElement(By.xpath("//button[last()]"));
         element.click();
+
+
+
 
 
         // List<WebElement> elements = wd.findElements(By.tagName("div"));
@@ -61,6 +86,22 @@ wd.navigate().to("https://contacts-app.tobbymarshall815.vercel.app/login");
         //by attribute contains
       //  element= wd.findElement(By.className("[href*='ogi']"));
 
+        //xPath selectors:
+        //by tagname
+        // element= wd.findElement(By.xpath("//div"));
+        //by classname
+        //  element= wd.findElement(By.xpath("//*[@class ='container']"));
+        //by id
+        // element= wd.findElement(By.xpath("//*[@id ='root']");
+        // by attribute
+        // element= wd.findElement(By.xpath("//*[@placeholder='Email']"));
+        // by attribute starts with
+        // element= wd.findElement(By.xpath("//*[starts-with(@href,'/Ho')]"));
+        // by attribute ends with-is unavaluable
+
+        //by attribute contains
+        //  element= wd.findElement(By.xpath("//*[contains(@href,'ogi')]"));
+
 
 
 
@@ -79,7 +120,7 @@ wd.navigate().to("https://contacts-app.tobbymarshall815.vercel.app/login");
     @AfterMethod
     public void postCondition(){
        // wd.close();
-       // wd.quit();
+        wd.quit();
 
     }
 }
